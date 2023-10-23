@@ -1,14 +1,16 @@
 import pytest
-from src.Ej_Algoritmo_Burbuja import example
+from src.Algoritmo_Burbuja import algoritmo_burbuja
 
 
 @pytest.mark.parametrize(
-    "inEjemplo, outMensaje",
+    "inLista, outLista",
     [
-        ("Prueba1", "Salida"),
+        ([10, 2, 8], [2, 8, 10]),
+        ([15, 5, 8, 14, 21], [5, 8, 14, 15, 21]),
+        ([43, 27, 3, 32, 15, 7, 21], [3, 7, 15, 21, 27, 32, 43])
     ]
 )
 
 
-def test_example(inEjemplo, outMensaje):
-    assert example(inEjemplo) == outMensaje
+def test_algoritmo_burbuja(inLista, outLista):
+    assert algoritmo_burbuja(inLista) == outLista
