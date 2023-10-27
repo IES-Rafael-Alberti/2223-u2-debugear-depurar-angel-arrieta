@@ -1,5 +1,5 @@
 import pytest
-from src.AlgBur_conInput import algoritmo_burbuja
+from src.AlgBurb_conInput import algoritmo_burbuja
 
 
 @pytest.mark.parametrize(
