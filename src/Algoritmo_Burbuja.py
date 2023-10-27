@@ -22,7 +22,9 @@ if __name__ == "__main__":
         try:
             for numero in listado:
                 if type(numero) != int:
-                    raise ValueError
+                    listado[listado.index(numero)] = int(numero)
+                else:
+                    continue
         except ValueError:
             print("Un valor de la lista no es número entero")
             raise ValueError
